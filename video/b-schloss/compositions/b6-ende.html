@@ -1,0 +1,58 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #b6-title { position: absolute; left: 192px; top: 110px; font: 700 60px var(--font-display); }
+    #b6-svg { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+    .b6-lab { position: absolute; left: 244px; font: 600 40px var(--font-display); }
+    .b6-lab span { font: 400 28px var(--font-body); color: var(--muted); margin-left: 18px; }
+    #b6-now { position: absolute; left: 192px; top: 880px; font: 500 32px var(--font-body); }
+    #b6-now span { color: var(--muted); font-weight: 400; }
+    #b6-side { position: absolute; left: 1120px; top: 470px; width: 608px; font: 400 40px/1.35 var(--font-body); }
+    #b6-end { position: absolute; left: 192px; top: 340px; }
+    #b6-end .w { display: inline-block; margin-right: 22px; }
+    #b6-end .l1 .w { font: 700 84px/1.2 var(--font-display); color: var(--muted); }
+    #b6-end .l2 .w { font: 700 110px/1.2 var(--font-display); color: var(--ink); }
+    #b6-foot { position: absolute; left: 192px; top: 720px; font: 400 32px var(--font-body); color: var(--muted); }
+  </style>
+  <div data-hf-id="hf-nsgb" id="root" data-composition-id="b6" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-dbs4" id="b6-stage">
+      <div data-hf-id="hf-sdx6" id="b6-title">Fünf Stufen, eine nach der anderen</div>
+      <svg data-hf-id="hf-jcf9" id="b6-svg" viewBox="0 0 1920 1080">
+        <g data-hf-id="hf-g8ru" fill="none" stroke="#173f7a" stroke-width="6" stroke-linecap="round">
+          <path data-hf-id="hf-znq8" class="b6-rail" d="M 212 840 L 212 320" /><path data-hf-id="hf-g4iy" class="b6-rail" d="M 1000 840 L 1000 320" />
+          <path data-hf-id="hf-2qej" class="b6-rung" d="M 212 820 L 1000 820" /><path data-hf-id="hf-epbf" class="b6-rung" d="M 212 712 L 1000 712" />
+          <path data-hf-id="hf-dnsn" class="b6-rung" d="M 212 604 L 1000 604" /><path data-hf-id="hf-1kw5" class="b6-rung" d="M 212 496 L 1000 496" />
+          <path data-hf-id="hf-zsnl" class="b6-rung" d="M 212 388 L 1000 388" />
+        </g>
+      </svg>
+      <div data-hf-id="hf-t3cf" class="b6-lab" style="top:760px">Stufe 1 · Subagenten<span data-hf-id="hf-e542">geplant</span></div>
+      <div data-hf-id="hf-itxq" class="b6-lab" style="top:652px">Stufe 2 · Hooks<span data-hf-id="hf-3zuu">geplant</span></div>
+      <div data-hf-id="hf-lu67" class="b6-lab" style="top:544px">Stufe 3 · MCP<span data-hf-id="hf-4e5v">geplant</span></div>
+      <div data-hf-id="hf-ppfk" class="b6-lab" style="top:436px">Stufe 4 · n8n<span data-hf-id="hf-4sgw">geplant</span></div>
+      <div data-hf-id="hf-96a4" class="b6-lab" style="top:328px">Stufe 5 · Testen<span data-hf-id="hf-20bp">geplant</span></div>
+      <div data-hf-id="hf-eq4u" id="b6-side">Jede Stufe wird erst gebaut, dann getestet, dann freigegeben.</div>
+      <div data-hf-id="hf-l0io" id="b6-now">Jetzt: Version 1 <span data-hf-id="hf-cy5w">· Regeln, 20 Test-Mails und Testorakel stehen</span></div>
+    </div>
+    <div data-hf-id="hf-mul9" id="b6-end">
+      <div data-hf-id="hf-x6ul" class="l1"><span data-hf-id="hf-wwca" class="w">15</span><span data-hf-id="hf-jj32" class="w">Jahre</span><span data-hf-id="hf-gti6" class="w">Systems</span><span data-hf-id="hf-6mnn" class="w">Engineering</span><span data-hf-id="hf-gboq" class="w">im</span><span data-hf-id="hf-4kwj" class="w">Auto.</span></div>
+      <div data-hf-id="hf-14ym" class="l2"><span data-hf-id="hf-3mnd" class="w">Jetzt</span><span data-hf-id="hf-kxhc" class="w">für</span><span data-hf-id="hf-n4mv" class="w">den</span><span data-hf-id="hf-v1up" class="w">Posteingang.</span></div>
+    </div>
+    <div data-hf-id="hf-bws9" id="b6-foot">Demo-Projekt · Posteingangs-Agent für eine Steuerkanzlei · nur erfundene Daten</div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo(["#b6-end .w", "#b6-foot", ".b6-lab", "#b6-side", "#b6-now"], { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
+      tl.fromTo("#b6-title", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, 0.1);
+      tl.fromTo(".b6-rail", { strokeDasharray: 520, strokeDashoffset: 520 }, { strokeDashoffset: 0, duration: 0.7, ease: "power2.inOut" }, 0.3);
+      tl.fromTo(".b6-rung", { strokeDasharray: 788, strokeDashoffset: 788 }, { strokeDashoffset: 0, duration: 0.4, ease: "power2.out", stagger: 0.3 }, 0.8);
+      tl.to(".b6-lab", { opacity: 1, duration: 0.25, stagger: 0.3 }, 1.0);
+      tl.to("#b6-side", { opacity: 1, duration: 0.4 }, 2.2);
+      tl.to("#b6-now", { opacity: 1, duration: 0.4 }, 2.4);
+      tl.to("#b6-stage", { opacity: 0, filter: "blur(12px)", duration: 0.3, ease: "power3.in" }, 5.4);
+      tl.fromTo("#b6-end .w", { filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13, stagger: 0.067 }, 5.8);
+      tl.to("#b6-foot", { opacity: 1, duration: 0.4 }, 7.0);
+      window.__timelines["b6"] = tl;
+    })();
+  </script>
+</template>

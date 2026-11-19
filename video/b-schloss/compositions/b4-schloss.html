@@ -1,0 +1,76 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #b4-title { position: absolute; left: 192px; top: 120px; font: 700 60px var(--font-display); color: var(--ink); }
+    #b4-badge { position: absolute; left: 1468px; top: 134px; padding: 6px 16px; border: 3px solid var(--muted); border-radius: 6px; font: 500 30px var(--font-body); color: var(--muted); }
+    .b4-box { position: absolute; background: var(--box); border: 4px solid var(--ink); border-radius: 6px; padding: 18px 24px; }
+    .b4-box .m { font: 600 46px var(--font-display); }
+    .b4-box .s { font: 400 28px var(--font-body); color: var(--muted); margin-top: 2px; }
+    #b4-svg { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: visible; }
+    #b4-gate { position: absolute; left: 1088px; top: 490px; width: 24px; height: 200px; background: var(--signal); border-radius: 4px; }
+    .b4-pk { position: absolute; left: 510px; top: 546px; background: #ffffff; border: 4px solid var(--ink); border-radius: 6px; padding: 6px 16px; }
+    .b4-pk .k { font: 600 28px var(--font-display); }
+    .b4-pk .c { font: 400 28px var(--font-mono); white-space: nowrap; }
+    #b4-block { position: absolute; left: 1136px; top: 700px; font: 500 34px var(--font-body); color: var(--signal); }
+    #b4-ret { position: absolute; left: 520px; top: 742px; font: 400 30px var(--font-body); color: var(--muted); }
+    #b4-ok { position: absolute; left: 1136px; top: 700px; font: 500 34px var(--font-body); color: var(--ok); }
+    .b4-cap { position: absolute; left: 192px; top: 830px; width: 1536px; font: 500 42px var(--font-body); color: var(--ink); }
+    #b4-quote { position: absolute; left: 192px; top: 910px; font: 400 30px var(--font-body); color: var(--muted); }
+  </style>
+  <div data-hf-id="hf-fl9p" id="root" data-composition-id="b4" data-width="1920" data-height="1080" data-layout-allow-overlap>
+    <div data-hf-id="hf-8mem" id="b4-stage">
+      <div data-hf-id="hf-i8tz" id="b4-title">Das Schloss: ein Hook vor jedem Werkzeugaufruf</div>
+      <div data-hf-id="hf-0xui" id="b4-badge">Stufe 2 · geplant</div>
+      <svg data-hf-id="hf-zx2b" id="b4-svg" viewBox="0 0 1920 1080">
+        <g data-hf-id="hf-u3qc" fill="none" stroke="#173f7a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <path data-hf-id="hf-ahlz" d="M 492 590 L 1402 590" /><path data-hf-id="hf-krdu" d="M 1384 576 L 1404 590 L 1384 604" />
+          <path data-hf-id="hf-4upw" d="M 1100 410 L 1100 486" stroke-dasharray="10 8" />
+        </g>
+        <g data-hf-id="hf-k74h" id="b4-retp" fill="none" stroke="#5e7391" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <path data-hf-id="hf-pyxr" d="M 1060 664 Q 760 780 350 664" /><path data-hf-id="hf-b2io" d="M 372 656 L 348 662 L 364 682" />
+        </g>
+      </svg>
+      <div data-hf-id="hf-h94b" class="b4-box" style="left:192px;top:520px;width:300px;height:140px"><div data-hf-id="hf-c732" class="m">Agent</div><div data-hf-id="hf-gqzx" class="s">will handeln</div></div>
+      <div data-hf-id="hf-qpaa" class="b4-box" style="left:1408px;top:520px;width:320px;height:140px"><div data-hf-id="hf-rccb" class="m">Dateien</div><div data-hf-id="hf-4aee" class="s">mails/ · ausgabe/</div></div>
+      <div data-hf-id="hf-5utp" class="b4-box" id="b4-hook" style="left:900px;top:270px;width:400px;height:140px"><div data-hf-id="hf-xr0d" class="m">PreToolUse-Hook</div><div data-hf-id="hf-iqce" class="s">Skript prüft vorher</div></div>
+      <div data-hf-id="hf-af53" class="b4-pk" id="b4-pk1"><div data-hf-id="hf-0471" class="k">Bash</div><div data-hf-id="hf-j0mh" class="c">rm -r mails/eingang</div></div>
+      <div data-hf-id="hf-1r98" class="b4-pk" id="b4-pk2"><div data-hf-id="hf-fs32" class="k">Write</div><div data-hf-id="hf-ndr5" class="c">ausgabe/vorschlaege.csv</div></div>
+      <div data-hf-id="hf-zx61" id="b4-gate"></div>
+      <div data-hf-id="hf-d8yt" id="b4-block">blockiert · Exit-Code 2</div>
+      <div data-hf-id="hf-9pdj" id="b4-ret">Grund geht zurück an Claude</div>
+      <div data-hf-id="hf-kik8" id="b4-ok">erlaubt · Schreiben nach ausgabe/</div>
+      <div data-hf-id="hf-z1ys" class="b4-cap" id="b4-cap1">Hier entscheidet nicht das Modell, sondern ein Skript.</div>
+      <div data-hf-id="hf-comf" class="b4-cap" id="b4-cap2">Wie Ebene 2 im E-Gas-Konzept: Die Überwachung prüft die Funktion.</div>
+      <div data-hf-id="hf-1i7d" id="b4-quote">Hooks geben „deterministic control“ · code.claude.com/docs/en/hooks-guide</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo(["#b4-pk1", "#b4-pk2", "#b4-block", "#b4-ret", "#b4-retp", "#b4-ok", ".b4-cap", "#b4-quote"], { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
+      tl.fromTo("#b4-stage", { y: 220, opacity: 0, filter: "blur(14px)" }, { y: 0, opacity: 1, filter: "blur(0px)", duration: 0.4, ease: "expo.out" }, 0);
+      tl.fromTo("#b4-gate", { scaleY: 0, transformOrigin: "50% 0%" }, { scaleY: 0, duration: 0.01 }, 0);
+      tl.fromTo("#b4-hook", { y: -20 }, { y: 0, duration: 0.5, ease: "expo.out" }, 0.6);
+      // Aufruf 1: löschen
+      tl.fromTo("#b4-pk1", { x: -120 }, { opacity: 1, x: 0, duration: 0.4, ease: "expo.out" }, 1.0);
+      tl.to("#b4-pk1", { x: 210, duration: 1.3, ease: "power2.inOut" }, 1.6);
+      tl.to("#b4-gate", { scaleY: 1, duration: 0.25, ease: "power4.in" }, 3.1);
+      tl.to("#b4-pk1", { borderColor: "#d62828", color: "#d62828", duration: 0.15 }, 3.4);
+      tl.fromTo("#b4-block", { filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, 3.6);
+      tl.to(["#b4-retp", "#b4-ret"], { opacity: 1, duration: 0.4 }, 4.2);
+      tl.to("#b4-cap1", { opacity: 1, duration: 0.2 }, 4.6);
+      // Aufruf 2: schreiben nach ausgabe/
+      tl.to(["#b4-pk1", "#b4-block", "#b4-ret", "#b4-retp"], { opacity: 0, duration: 0.25 }, 6.6);
+      tl.fromTo("#b4-pk2", { x: -120 }, { opacity: 1, x: 0, duration: 0.4, ease: "expo.out" }, 6.8);
+      tl.to("#b4-gate", { scaleY: 0, duration: 0.25, ease: "power2.out" }, 7.3);
+      tl.to("#b4-pk2", { x: 1240 - 510, duration: 1.5, ease: "power2.inOut" }, 7.5);
+      tl.to("#b4-pk2", { opacity: 0, duration: 0.2 }, 8.9);
+      tl.fromTo("#b4-ok", { filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, 9.0);
+      tl.to("#b4-cap1", { opacity: 0, filter: "blur(8px)", duration: 0.18 }, 10.2);
+      tl.fromTo("#b4-cap2", { filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, 10.32);
+      tl.to("#b4-quote", { opacity: 1, duration: 0.4 }, 11.4);
+      tl.to("#b4-stage", { x: -420, opacity: 0, filter: "blur(16px)", duration: 0.3, ease: "power3.in" }, 14.6);
+      window.__timelines["b4"] = tl;
+    })();
+  </script>
+</template>

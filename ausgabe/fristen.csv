@@ -1,0 +1,6 @@
+mail_id;bescheid_art;bescheiddatum;zugang;bekanntgabe;fristende;rechenweg;status
+mail_03;Einkommensteuer 2025;19.10.2026;post;23.10.2026;23.11.2026;Mo 19.10.2026 + 4 Tage (Post) = Fr 23.10.2026 -> Bekanntgabe Fr 23.10.2026 -> + 1 Monat = Mo 23.11.2026 -> Fristende Mo 23.11.2026;offen
+mail_07;Umsatzsteuer 2024;21.10.2026;post;26.10.2026;26.11.2026;Mi 21.10.2026 + 4 Tage (Post) = So 25.10.2026 -> So 25.10.2026 ist Sonntag -> Bekanntgabe Mo 26.10.2026 -> + 1 Monat = Do 26.11.2026 -> Fristende Do 26.11.2026;offen
+mail_10;Einkommensteuer 2025;26.10.2026;elster;30.10.2026;30.11.2026;Mo 26.10.2026 + 4 Tage (ELSTER) = Fr 30.10.2026 -> Bekanntgabe Fr 30.10.2026 -> + 1 Monat = Mo 30.11.2026 -> Fristende Mo 30.11.2026;offen
+mail_15;Gewerbesteuermessbetrag 2025;02.11.2026;post;06.11.2026;07.12.2026;Mo 02.11.2026 + 4 Tage (Post) = Fr 06.11.2026 -> Bekanntgabe Fr 06.11.2026 -> + 1 Monat = So 06.12.2026 -> So 06.12.2026 ist Sonntag -> Fristende Mo 07.12.2026;offen
+mail_19;Einkommensteuer 2025;23.10.2026;post;27.10.2026;27.11.2026;Fr 23.10.2026 + 4 Tage (Post) = Di 27.10.2026 -> Bekanntgabe Di 27.10.2026 -> + 1 Monat = Fr 27.11.2026 -> Fristende Fr 27.11.2026;offen

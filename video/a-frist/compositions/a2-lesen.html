@@ -1,0 +1,78 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: var(--ground); overflow: hidden; }
+    #a2-sheet { position: absolute; left: 192px; top: 110px; width: 900px; height: 660px; background: var(--paper);
+      border: 2px solid var(--line); border-radius: 12px; box-shadow: 0 8px 24px rgba(27,36,48,0.10); overflow: hidden; }
+    #a2-text { position: absolute; left: 44px; top: 40px; font: 400 28px/40.6px var(--font-mono); color: var(--ink); white-space: pre; }
+    #a2-text .l { height: 40.6px; }
+    #a2-text .dim { color: var(--muted); }
+    .a2-mk { background-repeat: no-repeat; background-size: 0% 100%; border-radius: 4px; }
+    #a2-mk-frage { background-image: linear-gradient(rgba(18,144,106,0.24), rgba(18,144,106,0.24)); }
+    #a2-mk-datum { background-image: linear-gradient(rgba(200,16,46,0.2), rgba(200,16,46,0.2)); }
+    #a2-mk-bescheid { background-image: linear-gradient(rgba(217,84,30,0.24), rgba(217,84,30,0.24)); }
+    #a2-scan { position: absolute; left: 0; top: 40px; width: 900px; height: 41px; background: rgba(27,36,48,0.07); }
+    #a2-col { position: absolute; left: 1172px; top: 130px; width: 556px; }
+    #a2-head { font: 700 56px/1.1 var(--font-display); letter-spacing: -0.01em; }
+    .a2-find { margin-top: 30px; padding-left: 22px; border-left: 8px solid var(--ink); }
+    .a2-find .k { font: 700 28px var(--font-body); }
+    .a2-find .v { font: 400 34px/1.25 var(--font-body); margin-top: 4px; }
+    #a2-f-frage { border-color: var(--rueck); } #a2-f-frage .k { color: var(--rueck); }
+    #a2-f-datum { border-color: var(--frist); } #a2-f-datum .k { color: var(--frist); }
+    #a2-f-bescheid { border-color: var(--bescheid); } #a2-f-bescheid .k { color: var(--bescheid); }
+    #a2-rule { position: absolute; left: 1172px; top: 620px; width: 556px; background: var(--paper); border: 2px solid var(--line);
+      border-radius: 10px; padding: 22px 26px; }
+    #a2-rule .k { font: 700 28px var(--font-body); color: var(--muted); }
+    #a2-rule .v { font: 400 34px/1.3 var(--font-body); margin-top: 6px; }
+    #a2-group { position: absolute; left: 1172px; top: 838px; height: 84px; padding: 0 34px; display: flex; align-items: center;
+      background: var(--bescheid); color: #ffffff; border-radius: 10px; font: 700 48px var(--font-display); }
+    #a2-note { position: absolute; left: 1172px; top: 936px; font: 400 28px var(--font-body); color: var(--muted); }
+    #a2-carry { position: absolute; left: 810px; top: 110px; width: 300px; height: 76px; display: flex; align-items: center;
+      justify-content: center; background: var(--paper); border: 3px solid var(--frist); border-radius: 10px;
+      font: 700 44px var(--font-display); color: var(--frist); }
+  </style>
+  <div data-hf-id="hf-ogsk" id="root" data-composition-id="a2" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-voh5" id="a2-stage">
+      <div data-hf-id="hf-zd2m" id="a2-sheet">
+        <div data-hf-id="hf-3862" id="a2-scan"></div>
+        <div data-hf-id="hf-41m0" id="a2-text"><div data-hf-id="hf-cgy6" class="l dim">Von: Stefanie Holtkamp</div><div data-hf-id="hf-d2jc" class="l dim">Betreff: Einspruch?</div><div data-hf-id="hf-7a5t" class="l dim">Datum: 03.11.2026 15:30</div><div data-hf-id="hf-5pjo" class="l"> </div><div data-hf-id="hf-gkgg" class="l">anbei mein Steuerbescheid für 2025,</div><div data-hf-id="hf-yfhs" class="l">er kam per Post. Mir kommt die Nachzahlung</div><div data-hf-id="hf-9l8v" class="l">viel zu hoch vor, die Fahrtkosten fehlen</div><div data-hf-id="hf-vd44" class="l">anscheinend. <span data-hf-id="hf-m2ne" class="a2-mk" id="a2-mk-frage">Soll ich Einspruch einlegen?</span></div><div data-hf-id="hf-ok30" class="l"> </div><div data-hf-id="hf-hn3w" class="l dim">----- Anhang (Textauszug) -----</div><div data-hf-id="hf-hm15" class="l">Finanzamt Beispielstadt</div><div data-hf-id="hf-nd5x" class="l"><span data-hf-id="hf-up60" class="a2-mk" id="a2-mk-datum">Datum: 23.10.2026</span></div><div data-hf-id="hf-nrgy" class="l"><span data-hf-id="hf-gzub" class="a2-mk" id="a2-mk-bescheid">Bescheid für 2025 über Einkommensteuer</span></div><div data-hf-id="hf-lt3z" class="l">Nachzahlung: 1.380,00 EUR</div></div>
+      </div>
+      <div data-hf-id="hf-xkq5" id="a2-col">
+        <div data-hf-id="hf-85xm" id="a2-head">Der Agent liest</div>
+        <div data-hf-id="hf-bmvn" class="a2-find" id="a2-f-frage"><div data-hf-id="hf-nn4m" class="k">Frage</div><div data-hf-id="hf-b52p" class="v">„Soll ich Einspruch einlegen?“</div></div>
+        <div data-hf-id="hf-xa67" class="a2-find" id="a2-f-datum"><div data-hf-id="hf-y10c" class="k">Datum des Bescheids</div><div data-hf-id="hf-71mo" class="v">23.10.2026</div></div>
+        <div data-hf-id="hf-dq6l" class="a2-find" id="a2-f-bescheid"><div data-hf-id="hf-fb7m" class="k">Bescheid</div><div data-hf-id="hf-dgia" class="v">Einkommensteuer 2025</div></div>
+      </div>
+      <div data-hf-id="hf-le43" id="a2-rule"><div data-hf-id="hf-v1un" class="k">Regel 7 · Vorrang</div><div data-hf-id="hf-ad9h" class="v">Bescheid geht vor. So geht keine Frist verloren.</div></div>
+      <div data-hf-id="hf-uzgi" id="a2-group">Gruppe: bescheid</div>
+      <div data-hf-id="hf-euwb" id="a2-note">Die Frage kommt in die Begründung.</div>
+    </div>
+    <div data-hf-id="hf-psog" id="a2-carry">23.10.2026</div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      // Das Blatt aus Szene 1 landet auf seinem Platz
+      tl.fromTo("#a2-sheet", { x: -192, y: -110, scaleX: 1920 / 900, scaleY: 1080 / 660, transformOrigin: "0% 0%", borderRadius: 0 },
+        { x: 0, y: 0, scaleX: 1, scaleY: 1, borderRadius: 12, duration: 0.7, ease: "power2.inOut" }, 0);
+      tl.fromTo("#a2-text .l", { opacity: 0 }, { opacity: 1, duration: 0.2, stagger: 0.04 }, 0.6);
+      tl.fromTo("#a2-scan", { opacity: 0, y: 0 }, { opacity: 1, duration: 0.15 }, 0.95);
+      tl.to("#a2-scan", { y: 13 * 40.6, duration: 3.0, ease: "none" }, 1.0);
+      tl.to("#a2-scan", { opacity: 0, duration: 0.2 }, 4.05);
+      tl.fromTo("#a2-head", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, 0.8);
+      const hits = [["frage", 2.85], ["datum", 3.55], ["bescheid", 3.8]];
+      hits.forEach(([k, t]) => {
+        tl.fromTo("#a2-mk-" + k, { backgroundSize: "0% 100%" }, { backgroundSize: "100% 100%", duration: 0.3, ease: "expo.out" }, t);
+        tl.fromTo("#a2-f-" + k, { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, t + 0.05);
+      });
+      tl.fromTo("#a2-rule", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.25 }, 5.2);
+      tl.fromTo("#a2-group", { opacity: 0, scale: 0.6, transformOrigin: "0% 50%" }, { opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.6)" }, 7.0);
+      tl.fromTo("#a2-note", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 9.2);
+      // Das Datum wandert in die nächste Szene
+      tl.fromTo("#a2-carry", { opacity: 0, x: 236 + 7 * 16.8 - 810 - 14, y: 110 + 40 + 11 * 40.6 - 110 - 14, scale: 0.62, transformOrigin: "0% 0%" },
+        { opacity: 1, duration: 0.15 }, 12.4);
+      tl.to("#a2-carry", { x: 0, y: 0, scale: 1, duration: 0.8, ease: "power2.inOut" }, 12.55);
+      tl.to("#a2-stage", { opacity: 0, filter: "blur(12px)", duration: 0.35, ease: "power3.in" }, 12.5);
+      window.__timelines["a2"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,24 @@
+Von: Dietmar Kuhlwein <d.kuhlwein@webpost.example>
+An: posteingang@kanzlei-musterhain.example
+Datum: 29.10.2026 08:15
+Betreff: Tankbeleg
+Anhang: Tankquittung.jpg
+
+Moin,
+
+hier noch der Tankbeleg von der Dienstfahrt.
+
+Gruß
+D. Kuhlwein
+
+----- Anhang: Tankquittung.jpg (Textauszug) -----
+TANKSTELLE AM RING
+Ringstraße 88 · 99999 Beispielstadt
+
+Samstag, 3. Oktober 2026      14:32 Uhr
+
+Super E10   38,45 l x 1,674 EUR
+SUMME EUR                 64,37
+davon MwSt 19 %           10,28
+
+Vielen Dank für Ihren Besuch!

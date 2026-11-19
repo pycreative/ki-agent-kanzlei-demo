@@ -1,0 +1,94 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: var(--ground); overflow: hidden; }
+    #a1-left { position: absolute; left: 192px; top: 220px; width: 600px; }
+    #a1-day { font: 400 34px var(--font-body); color: var(--muted); }
+    #a1-title { font: 700 96px/1.05 var(--font-display); letter-spacing: -0.01em; margin-top: 18px; }
+    #a1-count { font: 700 96px/1.05 var(--font-display); letter-spacing: -0.01em; color: var(--ink); }
+    #a1-count b { color: var(--bescheid); font-weight: 700; }
+    #a1-line { position: absolute; left: 192px; top: 650px; width: 600px; font: 700 48px/1.2 var(--font-body); }
+    #a1-line .frist { color: var(--frist); }
+    #a1-panel { position: absolute; left: 840px; top: 150px; width: 888px; height: 792px; background: var(--paper);
+      border: 2px solid var(--line); border-radius: 12px; box-shadow: 0 8px 24px rgba(27,36,48,0.10); overflow: hidden; }
+    #a1-head { height: 56px; padding: 0 24px; display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 2px solid var(--line); font: 700 24px var(--font-body); color: var(--muted); }
+    .a1-row { position: absolute; left: 0; width: 884px; height: 36px; display: flex; align-items: center; padding: 0 24px;
+      font: 400 22px var(--font-body); color: var(--ink); border-bottom: 1px solid #eceef1; }
+    .a1-row .from { width: 270px; font-weight: 700; white-space: nowrap; overflow: hidden; }
+    .a1-row .subj { flex: 1; white-space: nowrap; overflow: hidden; }
+    .a1-row .when { width: 120px; text-align: right; color: var(--muted); }
+    #a1-hl { position: absolute; left: 0; top: 92px; width: 884px; height: 36px; background: rgba(217,84,30,0.16);
+      border-left: 8px solid var(--bescheid); }
+    #a1-grow { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; background: var(--paper); }
+  </style>
+  <div data-hf-id="hf-nvdt" id="root" data-composition-id="a1" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-c932" id="a1-stage">
+      <div data-hf-id="hf-it6n" id="a1-left">
+        <div data-hf-id="hf-ne0g" id="a1-day">Dienstag, 03.11.2026</div>
+        <div data-hf-id="hf-cwrr" id="a1-title">Posteingang</div>
+        <div data-hf-id="hf-tj2u" id="a1-count"><b data-hf-id="hf-k42n">20</b> neue Mails</div>
+      </div>
+      <div data-hf-id="hf-34it" id="a1-line">Eine davon hat eine <span data-hf-id="hf-gstd" class="frist">Frist.</span></div>
+      <div data-hf-id="hf-fige" id="a1-panel">
+        <div data-hf-id="hf-rivh" id="a1-head" data-layout-ignore><span data-hf-id="hf-pkw5">posteingang@kanzlei-musterhain.example</span><span data-hf-id="hf-hint">20 ungelesen</span></div>
+        <div data-hf-id="hf-rq08" id="a1-hl"></div>
+        <div data-hf-id="hf-cl1o" id="a1-rows" data-layout-ignore></div>
+      </div>
+    </div>
+    <div data-hf-id="hf-v4v1" id="a1-grow"></div>
+  </div>
+  <script>
+    (function () {
+      const rows = [
+        ["Petra Wendelin", "WG: Rechnung Flyer", "16:10"],
+        ["Stefanie Holtkamp", "Einspruch?", "15:30"],
+        ["Hannelore Kesselring", "Rückruf", "15:02"],
+        ["Bernd Achterberg", "Bescheid", "14:25"],
+        ["Svenja Morgenroth", "Rechnung Webseite", "13:40"],
+        ["Jutta Rebstock", "Gewerbesteuermessbescheid", "13:15"],
+        ["Ursula Steinbrecher", "Keine Rückmeldung!", "31.10."],
+        ["Robert Falkenhain", "Dringend: meine Unterlagen", "30.10."],
+        ["Kai Lindenthal", "Software-Abo Rechnung", "30.10."],
+        ["Gerda Pfannstiel", "Rechnung Maler", "30.10."],
+        ["Florian Abendroth", "WG: Neuer Bescheid in Mein ELSTER", "29.10."],
+        ["Natalie Wernecke", "Unterlagen für 2025", "29.10."],
+        ["Dietmar Kuhlwein", "Tankbeleg", "29.10."],
+        ["Tobias Hollerbusch", "Post vom Finanzamt", "28.10."],
+        ["Mareike Dorn", "Frage Homeoffice", "28.10."],
+        ["Henrik Olschewski", "Bürostuhl", "28.10."],
+        ["Carla Bennemann", "Neuer Laptop", "27.10."],
+        ["Murat Aydin", "Steuerbescheid 2025", "27.10."],
+        ["Jonas Treuberg", "Termin Steuererklärung 2025", "26.10."],
+        ["Sabine Krögerhoff", "Rechnung Büromaterial Oktober", "26.10."],
+      ];
+      const box = document.getElementById("a1-rows");
+      rows.forEach((r, k) => {
+        const el = document.createElement("div");
+        el.className = "a1-row";
+        el.id = "a1-row-" + k;
+        el.style.top = 56 + k * 36 + "px";
+        el.innerHTML = '<span class="from"></span><span class="subj"></span><span class="when"></span>';
+        el.children[0].textContent = r[0];
+        el.children[1].textContent = r[1];
+        el.children[2].textContent = r[2];
+        box.appendChild(el);
+      });
+
+      const tl = gsap.timeline({ paused: true });
+            tl.fromTo(".a1-row", { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.45, ease: "expo.out", stagger: 0.06 }, 0.05);
+                  tl.fromTo("#a1-count", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, 1.6);
+      tl.fromTo("#a1-hl", { opacity: 0, scaleX: 0, transformOrigin: "0% 50%" }, { opacity: 1, scaleX: 1, duration: 0.5, ease: "expo.out" }, 3.2);
+      tl.fromTo("#a1-row-1", { fontWeight: 400 }, { fontWeight: 700, duration: 0.01 }, 3.25);
+      tl.fromTo("#a1-line", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.25 }, 3.5);
+      // Die markierte Zeile wird zum Blatt (Objekt wird Welt)
+      tl.to("#a1-stage", { filter: "blur(14px)", opacity: 0, duration: 0.35, ease: "power2.in" }, 6.75);
+      tl.fromTo(
+        "#a1-grow",
+        { opacity: 0, x: 840, y: 150 + 2 + 56 + 36, scaleX: 884 / 1920, scaleY: 36 / 1080, transformOrigin: "0% 0%" },
+        { opacity: 1, x: 0, y: 0, scaleX: 1, scaleY: 1, duration: 0.65, ease: "power2.inOut" },
+        6.5,
+      );
+      window.__timelines["a1"] = tl;
+    })();
+  </script>
+</template>

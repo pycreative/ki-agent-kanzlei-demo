@@ -1,0 +1,55 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: var(--ground); overflow: hidden; }
+    #a6-head { position: absolute; left: 192px; top: 150px; font: 700 60px var(--font-display); letter-spacing: -0.01em; }
+    .a6-lab { position: absolute; left: 192px; font: 700 32px var(--font-body); }
+    .a6-lab span { font: 400 28px var(--font-mono); color: var(--muted); margin-left: 12px; }
+    .a6-sq { position: absolute; width: 60px; height: 60px; border-radius: 6px; display: flex; align-items: center; justify-content: center;
+      font: 700 22px var(--font-body); color: #fff; }
+    .a6-sq.q { background: #e3e6ea; color: var(--muted); font-size: 30px; }
+    #a6-scan { position: absolute; left: 186px; top: 370px; width: 6px; height: 250px; background: var(--ink); border-radius: 3px; }
+    #a6-rate { position: absolute; left: 192px; top: 700px; font: 700 80px var(--font-display); letter-spacing: -0.01em; }
+    #a6-rate span { color: var(--muted); }
+    #a6-note { position: absolute; left: 192px; top: 812px; font: 400 34px var(--font-body); color: var(--muted); }
+  </style>
+  <div data-hf-id="hf-0x3k" id="root" data-composition-id="a6" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-4g8d" id="a6-stage">
+      <div data-hf-id="hf-ygpt" id="a6-head">Geprüft wird gegen die vorher festgelegte Lösung</div>
+      <div data-hf-id="hf-jk9e" class="a6-lab" style="top:318px">Soll<span data-hf-id="hf-4d5l">tests/erwartet.csv</span></div>
+      <div data-hf-id="hf-q4zr" class="a6-lab" style="top:478px">Ist<span data-hf-id="hf-uwu0">Ergebnis des Agenten</span></div>
+      <div data-hf-id="hf-6xf4" id="a6-soll" data-layout-ignore></div>
+      <div data-hf-id="hf-6mc3" id="a6-ist"></div>
+      <div data-hf-id="hf-56li" id="a6-scan"></div>
+      <div data-hf-id="hf-whmd" id="a6-rate">Trefferquote: <span data-hf-id="hf-ygom">wird gemessen</span></div>
+      <div data-hf-id="hf-nrj2" id="a6-note">Stufe 5 · geplant · keine erfundenen Zahlen</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const g = ["beleg","rueck","bescheid","beleg","unsicher","rueck","bescheid","beleg","rueck","bescheid","unsicher","beleg","unsicher","rueck","bescheid","beleg","unsicher","rueck","bescheid","beleg"];
+      const col = { beleg: "#2f6fdb", rueck: "#12906a", bescheid: "#d9541e", unsicher: "#e0a800" };
+      const soll = document.getElementById("a6-soll"), ist = document.getElementById("a6-ist");
+      g.forEach((k, i) => {
+        const a = document.createElement("div");
+        a.className = "a6-sq a6-s"; a.style.left = 192 + i * 68 + "px"; a.style.top = "372px"; a.style.background = col[k];
+        if (k === "unsicher") a.style.color = "#3a2e00";
+        a.textContent = String(i + 1).padStart(2, "0"); soll.appendChild(a);
+        const b = document.createElement("div");
+        b.className = "a6-sq q a6-i"; b.style.left = 192 + i * 68 + "px"; b.style.top = "532px"; b.textContent = "?"; ist.appendChild(b);
+      });
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#a6-stage", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.25 }, 0);
+      tl.fromTo(["#a6-rate", "#a6-note", "#a6-scan"], { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
+      tl.fromTo(".a6-lab", { opacity: 0 }, { opacity: 1, duration: 0.2, stagger: 0.3 }, 0.5);
+      tl.fromTo(".a6-s", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.7)", stagger: 0.05 }, 0.8);
+      tl.fromTo(".a6-i", { opacity: 0 }, { opacity: 1, duration: 0.2, stagger: 0.04 }, 2.2);
+      tl.to("#a6-scan", { opacity: 1, duration: 0.1 }, 3.5);
+      tl.fromTo("#a6-scan", { x: 0 }, { x: 1356, duration: 1.1, ease: "power1.inOut" }, 3.6);
+      tl.to("#a6-scan", { opacity: 0, duration: 0.15 }, 4.7);
+      tl.fromTo("#a6-rate", { filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, 4.8);
+      tl.to("#a6-note", { opacity: 1, duration: 0.3 }, 5.3);
+      tl.to("#a6-stage", { opacity: 0, filter: "blur(10px)", duration: 0.25, ease: "power3.in" }, 7.6);
+      window.__timelines["a6"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,26 @@
+Von: Petra Wendelin <p.wendelin@mailpost.example>
+An: posteingang@kanzlei-musterhain.example
+Datum: 03.11.2026 16:10
+Betreff: WG: Rechnung Flyer
+Anhang: Rechnung_2026-1187.pdf
+
+Hallo,
+
+anbei die Rechnung der Druckerei für unsere Flyer.
+
+Petra Wendelin
+
+-------- Weitergeleitete Nachricht --------
+Von: Druckhaus Federkiel <rechnung@druckhaus-federkiel.example>
+Datum: 28.10.2026
+Betreff: Ihre Rechnung 2026-1187
+
+----- Anhang: Rechnung_2026-1187.pdf (Textauszug) -----
+Druckhaus Federkiel e.K. · Papiermühlweg 9 · 99999 Beispielstadt
+Rechnung Nr. 2026-1187
+Rechnungsdatum: 27.10.2026
+Leistungsdatum: 20.10.2026
+
+5.000 Flyer DIN lang, 4/4-farbig
+
+Rechnungsbetrag (inkl. 19 % USt): 412,30 EUR

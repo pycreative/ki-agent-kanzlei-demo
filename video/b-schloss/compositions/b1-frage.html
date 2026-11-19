@@ -1,0 +1,52 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #b1-title { position: absolute; left: 192px; top: 120px; width: 1536px; font: 700 76px/1.15 var(--font-display); color: var(--ink); }
+    #b1-title .w { display: inline-block; margin-right: 20px; }
+    #b1-svg { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+    .b1-lab { position: absolute; top: 806px; font: 600 38px var(--font-display); color: var(--ink); }
+    .b1-lab span { display: block; font: 400 28px var(--font-body); color: var(--muted); margin-top: 2px; }
+    #b1-cap { position: absolute; left: 192px; top: 920px; font: 500 44px var(--font-body); color: var(--ink); }
+  </style>
+  <div data-hf-id="hf-q1i6" id="root" data-composition-id="b1" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-9vsf" id="b1-stage">
+      <div data-hf-id="hf-yydv" id="b1-title"><span data-hf-id="hf-v3s5" class="w">Was</span><span data-hf-id="hf-k17o" class="w">haben</span><span data-hf-id="hf-8l4c" class="w">ein</span><span data-hf-id="hf-iboc" class="w">Notbremsassistent</span><span data-hf-id="hf-s0vh" class="w">und</span><span data-hf-id="hf-k5tw" class="w">ein</span><span data-hf-id="hf-5oa2" class="w">Kanzlei-Posteingang</span><span data-hf-id="hf-1u2d" class="w">gemeinsam?</span></div>
+      <svg data-hf-id="hf-mjy6" id="b1-svg" viewBox="0 0 1920 1080">
+        <g data-hf-id="hf-1kih" id="b1-car" fill="none" stroke="#173f7a" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+          <path data-hf-id="hf-u828" d="M 220 720 L 220 655 Q 230 622 285 616 L 390 610 L 465 548 Q 480 536 508 536 L 640 536 Q 668 536 684 552 L 744 610 L 800 616 Q 832 622 838 655 L 838 720 Z" fill="#f8fafd" />
+          <path data-hf-id="hf-8it2" d="M 480 610 L 530 556 L 600 556 L 600 610 Z M 622 610 L 622 556 L 662 556 L 712 610 Z" />
+          <circle data-hf-id="hf-c82h" cx="330" cy="722" r="44" fill="#f8fafd" /><circle data-hf-id="hf-b6aw" cx="330" cy="722" r="14" />
+          <circle data-hf-id="hf-bqb4" cx="728" cy="722" r="44" fill="#f8fafd" /><circle data-hf-id="hf-7ol3" cx="728" cy="722" r="14" />
+          <path data-hf-id="hf-292o" id="b1-cone" d="M 838 650 L 1010 588 L 1010 712 Z" stroke-dasharray="12 10" />
+        </g>
+        <line data-hf-id="hf-d6np" x1="180" y1="768" x2="1040" y2="768" stroke="#5e7391" stroke-width="3" />
+        <g data-hf-id="hf-g44t" id="b1-tray" fill="none" stroke="#173f7a" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+          <rect data-hf-id="hf-jwpd" x="1250" y="560" width="300" height="170" rx="6" fill="#f8fafd" transform="rotate(-6 1400 645)" />
+          <path data-hf-id="hf-imu2" d="M 1252 572 L 1400 655 L 1548 572" transform="rotate(-6 1400 645)" />
+          <rect data-hf-id="hf-7y8x" x="1300" y="590" width="300" height="170" rx="6" fill="#f8fafd" transform="rotate(4 1450 675)" />
+          <path data-hf-id="hf-bm2q" d="M 1302 602 L 1450 685 L 1598 602" transform="rotate(4 1450 675)" />
+          <g data-hf-id="hf-9os1" id="b1-new"><rect data-hf-id="hf-nf62" x="1330" y="520" width="300" height="170" rx="6" fill="#f8fafd" transform="rotate(-2 1480 605)" /><path data-hf-id="hf-cwrg" d="M 1332 532 L 1480 615 L 1628 532" transform="rotate(-2 1480 605)" /></g>
+          <path data-hf-id="hf-wdxt" d="M 1150 680 L 1200 768 L 1660 768 L 1710 680" fill="#f8fafd" />
+        </g>
+      </svg>
+      <div data-hf-id="hf-xjgu" class="b1-lab" style="left:220px">Notbremsassistent<span data-hf-id="hf-aigy">erkennt ein Hindernis</span></div>
+      <div data-hf-id="hf-4z31" class="b1-lab" style="left:1150px">Posteingang der Kanzlei<span data-hf-id="hf-lyvn">erkennt, was eine Mail will</span></div>
+      <div data-hf-id="hf-2sym" id="b1-cap">Beide erfassen, bewerten und handeln.</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#b1-title .w", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13, stagger: 0.07 }, 0.1);
+      tl.fromTo("#b1-cone", { opacity: 0.25 }, { opacity: 1, duration: 0.6, ease: "power2.out" }, 1.2);
+      tl.fromTo(".b1-lab", { opacity: 0 }, { opacity: 1, duration: 0.3, stagger: 0.25 }, 1.6);
+      tl.fromTo("#b1-cone", { strokeDashoffset: 0 }, { strokeDashoffset: -132, duration: 7.2, ease: "none" }, 1.8);
+      tl.fromTo("#b1-new", { y: -260, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power2.in" }, 6.4);
+      tl.fromTo("#b1-cap", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, 4.6);
+      tl.to("#b1-car", { x: 380, scale: 0.7, transformOrigin: "530px 650px", duration: 0.7, ease: "power3.in" }, 9.0);
+      tl.to("#b1-tray", { x: -380, scale: 0.7, transformOrigin: "1430px 680px", duration: 0.7, ease: "power3.in" }, 9.0);
+      tl.to("#b1-stage", { opacity: 0, filter: "blur(10px)", duration: 0.35, ease: "power3.in" }, 9.4);
+      window.__timelines["b1"] = tl;
+    })();
+  </script>
+</template>

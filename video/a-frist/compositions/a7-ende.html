@@ -1,0 +1,49 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: var(--ground); overflow: hidden; }
+    #a7-head { position: absolute; left: 192px; top: 150px; font: 700 60px var(--font-display); letter-spacing: -0.01em; }
+    #a7-svg { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+    .a7-st { position: absolute; top: 400px; width: 300px; margin-left: -150px; text-align: center; }
+    .a7-st .n { font: 700 28px var(--font-body); color: var(--muted); }
+    .a7-st .tick { width: 8px; height: 64px; background: var(--ink); margin: 22px auto 0; border-radius: 4px; }
+    .a7-st .k { font: 700 40px var(--font-display); margin-top: 26px; }
+    .a7-st .v { font: 400 28px var(--font-body); color: var(--muted); margin-top: 6px; }
+    #a7-now { position: absolute; left: 192px; top: 720px; font: 400 32px var(--font-body); color: var(--muted); }
+    #a7-now b { color: var(--ink); }
+    #a7-end { position: absolute; left: 192px; top: 330px; }
+    #a7-end .w { display: inline-block; font: 700 112px/1.15 var(--font-display); letter-spacing: -0.015em; margin-right: 26px; }
+    #a7-end .l1 .w { color: var(--muted); }
+    #a7-foot { position: absolute; left: 192px; top: 720px; font: 400 34px var(--font-body); color: var(--muted); }
+  </style>
+  <div data-hf-id="hf-j6fn" id="root" data-composition-id="a7" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-d1l4" id="a7-stage">
+      <div data-hf-id="hf-he6l" id="a7-head">Fünf Stufen bis zur fertigen Demo</div>
+      <svg data-hf-id="hf-fb65" id="a7-svg" viewBox="0 0 1920 1080"><path data-hf-id="hf-1tzt" id="a7-line" d="M 240 518 L 1680 518" fill="none" stroke="#1b2430" stroke-width="6" stroke-linecap="round" /></svg>
+      <div data-hf-id="hf-468q" class="a7-st" style="left:300px"><div data-hf-id="hf-7odq" class="n">Stufe 1</div><div data-hf-id="hf-32lj" class="tick"></div><div data-hf-id="hf-782f" class="k">Subagenten</div><div data-hf-id="hf-nqrb" class="v">geplant</div></div>
+      <div data-hf-id="hf-yrqq" class="a7-st" style="left:630px"><div data-hf-id="hf-82or" class="n">Stufe 2</div><div data-hf-id="hf-6c1z" class="tick"></div><div data-hf-id="hf-uwhh" class="k">Hooks</div><div data-hf-id="hf-co53" class="v">geplant</div></div>
+      <div data-hf-id="hf-nlju" class="a7-st" style="left:960px"><div data-hf-id="hf-8gzs" class="n">Stufe 3</div><div data-hf-id="hf-5xqy" class="tick"></div><div data-hf-id="hf-mkbd" class="k">MCP</div><div data-hf-id="hf-c9u2" class="v">geplant</div></div>
+      <div data-hf-id="hf-k5st" class="a7-st" style="left:1290px"><div data-hf-id="hf-5oul" class="n">Stufe 4</div><div data-hf-id="hf-5jfx" class="tick"></div><div data-hf-id="hf-2lc1" class="k">n8n</div><div data-hf-id="hf-bvj1" class="v">geplant</div></div>
+      <div data-hf-id="hf-k90w" class="a7-st" style="left:1620px"><div data-hf-id="hf-635m" class="n">Stufe 5</div><div data-hf-id="hf-8bl4" class="tick"></div><div data-hf-id="hf-b50w" class="k">Testen</div><div data-hf-id="hf-eno8" class="v">geplant</div></div>
+      <div data-hf-id="hf-s77p" id="a7-now" data-hold>Stand heute: <b data-hf-id="hf-1rpi">Version 1 in Arbeit</b> · Regeln, 20 Test-Mails und Testorakel stehen</div>
+    </div>
+    <div data-hf-id="hf-27v5" id="a7-end">
+      <div data-hf-id="hf-x6ul" class="l1"><span data-hf-id="hf-n4iu" class="w">Die</span><span data-hf-id="hf-6gxs" class="w">KI</span><span data-hf-id="hf-9drk" class="w">bereitet</span><span data-hf-id="hf-at0b" class="w">vor.</span></div>
+      <div data-hf-id="hf-14ym" class="l2"><span data-hf-id="hf-epk3" class="w">Der</span><span data-hf-id="hf-xv8y" class="w">Mensch</span><span data-hf-id="hf-ansq" class="w">entscheidet.</span></div>
+    </div>
+    <div data-hf-id="hf-u5zh" id="a7-foot">Demo-Projekt · Posteingangs-Agent für eine Steuerkanzlei · nur erfundene Daten</div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo(["#a7-end .w", "#a7-foot"], { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
+      tl.fromTo("#a7-head", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, 0.1);
+      tl.fromTo("#a7-line", { strokeDasharray: 1440, strokeDashoffset: 1440 }, { strokeDashoffset: 0, duration: 1.0, ease: "power2.inOut" }, 0.3);
+      tl.fromTo(".a7-st", { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.45, ease: "expo.out", stagger: 0.16 }, 0.6);
+      tl.fromTo("#a7-now", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 1.8);
+      tl.to("#a7-stage", { opacity: 0, filter: "blur(12px)", duration: 0.3, ease: "power3.in" }, 5.4);
+      tl.fromTo("#a7-end .w", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13, stagger: 0.067 }, 5.8);
+      tl.to("#a7-foot", { opacity: 1, duration: 0.4 }, 6.7);
+      window.__timelines["a7"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,109 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: var(--ground); overflow: hidden; }
+    .a3-month { position: absolute; top: 222px; font: 700 48px var(--font-display); letter-spacing: -0.01em; }
+    .a3-wd { position: absolute; top: 300px; width: 100px; text-align: center; font: 700 28px var(--font-body); color: var(--muted); }
+    .a3-cell { position: absolute; width: 100px; height: 78px; background: var(--paper); border: 1px solid var(--line); border-radius: 6px;
+      padding: 8px 10px; font: 700 30px var(--font-body); color: var(--ink); }
+    .a3-cell.we { background: #e8eaed; color: var(--muted); }
+    .a3-plus { position: absolute; width: 100px; height: 78px; display: flex; align-items: flex-end; justify-content: flex-end;
+      padding: 6px 10px; font: 700 28px var(--font-body); color: var(--muted); }
+    #a3-c23 { position: absolute; left: 596px; top: 585px; width: 100px; height: 78px; border: 5px solid var(--frist); border-radius: 6px; }
+    #a3-c27 { position: absolute; left: 293px; top: 665px; width: 100px; height: 78px; border-radius: 6px; background: var(--bescheid);
+      padding: 8px 10px; font: 700 30px var(--font-body); color: #fff; }
+    #a3-n27 { position: absolute; left: 1424px; top: 665px; width: 100px; height: 78px; border-radius: 6px; background: var(--frist);
+      padding: 8px 10px; font: 700 30px var(--font-body); color: #fff; }
+    #a3-ring { position: absolute; left: 0; top: 0; width: 100px; height: 78px; border: 5px solid var(--ink); border-radius: 8px; }
+    #a3-svg { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: visible; }
+    .a3-cap { position: absolute; left: 192px; top: 858px; width: 1536px; font: 700 40px var(--font-body); color: var(--ink); }
+    .a3-cap span { color: var(--muted); font-weight: 400; }
+    #a3-cap4 { font: 700 56px var(--font-display); color: var(--frist); top: 846px; }
+    #a3-cap4 span { font: 400 34px var(--font-body); color: var(--muted); }
+    #a3-foot { position: absolute; left: 192px; top: 930px; font: 400 30px var(--font-body); color: var(--muted); }
+    #a3-stamp { position: absolute; left: 1150px; top: 738px; padding: 10px 24px; border: 6px solid var(--frist); border-radius: 10px;
+      background: rgba(255,255,255,0.92); font: 700 46px var(--font-display); color: var(--frist); }
+    #a3-carry { position: absolute; left: 810px; top: 110px; width: 300px; height: 76px; display: flex; align-items: center; justify-content: center;
+      background: var(--paper); border: 3px solid var(--frist); border-radius: 10px; font: 700 44px var(--font-display); color: var(--frist); }
+  </style>
+  <div data-hf-id="hf-es2j" id="root" data-composition-id="a3" data-width="1920" data-height="1080" data-layout-allow-overlap>
+    <div data-hf-id="hf-1ypg" id="a3-stage">
+      <div data-hf-id="hf-behf" class="a3-month" id="a3-m-okt" style="left:192px">Oktober 2026</div>
+      <div data-hf-id="hf-borz" class="a3-month" id="a3-m-nov" style="left:1020px">November 2026</div>
+      <div data-hf-id="hf-9ht2" id="a3-grid"></div>
+      <div data-hf-id="hf-l44w" id="a3-c23"></div>
+      <div data-hf-id="hf-c6db" id="a3-c27">27</div>
+      <div data-hf-id="hf-if4m" id="a3-n27">27</div>
+      <div data-hf-id="hf-avzy" class="a3-plus" id="a3-p1" style="left:697px;top:585px">+1</div>
+      <div data-hf-id="hf-e3eg" class="a3-plus" id="a3-p2" style="left:798px;top:585px">+2</div>
+      <div data-hf-id="hf-xnjd" class="a3-plus" id="a3-p3" style="left:192px;top:665px">+3</div>
+      <div data-hf-id="hf-skq6" class="a3-plus" id="a3-p4" style="left:293px;top:665px;color:#ffffff">+4</div>
+      <div data-hf-id="hf-by0w" id="a3-ring"></div>
+      <svg data-hf-id="hf-ir5t" id="a3-svg" viewBox="0 0 1920 1080">
+        <path data-hf-id="hf-ngkt" id="a3-arc" d="M 343 660 Q 908 300 1474 658" fill="none" stroke="#1b2430" stroke-width="5" stroke-linecap="round" />
+        <path data-hf-id="hf-el2j" id="a3-head" d="M 1461 633 L 1474 658 L 1446 657" fill="none" stroke="#1b2430" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <div data-hf-id="hf-jnxn" class="a3-cap" id="a3-cap1">Bescheiddatum: Fr 23.10.2026</div>
+      <div data-hf-id="hf-iisg" class="a3-cap" id="a3-cap2">+ 4 Tage → Bekanntgabe <span data-hf-id="hf-93yr">(§ 122 Abs. 2 Nr. 1 AO)</span></div>
+      <div data-hf-id="hf-ffag" class="a3-cap" id="a3-cap3">+ 1 Monat → Fristende <span data-hf-id="hf-s9cj">(§ 355 Abs. 1 AO)</span></div>
+      <div data-hf-id="hf-4bqj" class="a3-cap" id="a3-cap4">Fristende: Fr 27.11.2026 <span data-hf-id="hf-gx1e">· ein Werktag, keine Verschiebung (§ 108 Abs. 3 AO)</span></div>
+      <div data-hf-id="hf-wput" id="a3-foot">Annahme: Bescheiddatum = Tag der Aufgabe zur Post. Darum prüft ein Mensch.</div>
+      <div data-hf-id="hf-49ow" id="a3-stamp">offen · Mensch prüft</div>
+    </div>
+    <div data-hf-id="hf-0t3t" id="a3-carry">23.10.2026</div>
+  </div>
+  <script>
+    (function () {
+      const grid = document.getElementById("a3-grid");
+      const wd = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"];
+      const months = [{ x: 192, off: 3, days: 31 }, { x: 1020, off: 6, days: 30 }];
+      months.forEach((m, mi) => {
+        wd.forEach((w, i) => {
+          const h = document.createElement("div");
+          h.className = "a3-wd"; h.style.left = m.x + i * 101 + "px"; h.textContent = w; grid.appendChild(h);
+        });
+        for (let d = 1; d <= m.days; d++) {
+          const p = m.off + d - 1, col = p % 7, row = Math.floor(p / 7);
+          const c = document.createElement("div");
+          c.className = "a3-cell" + (col >= 5 ? " we" : "");
+          c.id = "a3-d" + mi + "-" + d;
+          c.style.left = m.x + col * 101 + "px"; c.style.top = 345 + row * 80 + "px";
+          c.textContent = d; grid.appendChild(c);
+        }
+      });
+      const arc = document.getElementById("a3-arc");
+      const len = arc.getTotalLength();
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo(".a3-month", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, stagger: 0.1 }, 0.1);
+      tl.fromTo(".a3-wd, .a3-cell", { opacity: 0 }, { opacity: 1, duration: 0.15, stagger: 0.006 }, 0.2);
+      tl.fromTo(["#a3-c23", "#a3-c27", "#a3-n27", "#a3-ring", ".a3-plus", ".a3-cap", "#a3-foot", "#a3-stamp", "#a3-head"], { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
+      tl.fromTo(arc, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: len, duration: 0.01 }, 0);
+      // Datum landet im Kalender
+      tl.to("#a3-carry", { x: 596 + 50 - 960, y: 585 + 39 - 148, scale: 0.4, opacity: 0, duration: 0.7, ease: "power2.inOut" }, 1.2);
+      tl.to("#a3-c23", { opacity: 1, duration: 0.2 }, 1.75);
+      tl.to("#a3-cap1", { opacity: 1, duration: 0.2 }, 1.7);
+      // + 4 Tage
+      tl.to("#a3-cap1", { opacity: 0, filter: "blur(8px)", duration: 0.18 }, 3.3);
+      tl.fromTo("#a3-cap2", { filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18 }, 3.42);
+      tl.set("#a3-ring", { x: 596, y: 585 }, 3.4);
+      tl.to("#a3-ring", { opacity: 1, duration: 0.15 }, 3.4);
+      const hops = [[697, 585], [798, 585], [192, 665], [293, 665]];
+      hops.forEach(([x, y], i) => {
+        tl.to("#a3-ring", { x: x, y: y, duration: 0.28, ease: "expo.out" }, 3.6 + i * 0.4);
+        tl.to("#a3-p" + (i + 1), { opacity: 1, duration: 0.12 }, 3.65 + i * 0.4);
+      });
+      tl.to("#a3-c27", { opacity: 1, duration: 0.25 }, 5.2);
+      tl.to("#a3-cap2", { opacity: 0, filter: "blur(8px)", duration: 0.18 }, 7.0);
+      tl.fromTo("#a3-cap3", { filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18 }, 7.12);
+      // + 1 Monat
+      tl.to(arc, { strokeDashoffset: 0, duration: 1.7, ease: "power2.inOut" }, 7.4);
+      tl.to("#a3-head", { opacity: 1, duration: 0.15 }, 9.05);
+      tl.fromTo("#a3-n27", { scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.7)" }, 9.5);
+      tl.to("#a3-cap3", { opacity: 0, filter: "blur(8px)", duration: 0.18 }, 10.0);
+      tl.fromTo("#a3-cap4", { filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, 10.12);
+      tl.fromTo("#a3-stamp", { scale: 1.7, rotation: -2 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.3, ease: "power4.out" }, 11.0);
+      tl.to("#a3-foot", { opacity: 1, duration: 0.3 }, 12.4);
+      tl.to("#a3-stage", { x: -420, opacity: 0, filter: "blur(16px)", duration: 0.3, ease: "power3.in" }, 15.3);
+      window.__timelines["a3"] = tl;
+    })();
+  </script>
+</template>

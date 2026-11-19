@@ -1,0 +1,57 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: var(--ground); overflow: hidden; }
+    #a4-head { position: absolute; left: 192px; top: 120px; font: 700 72px var(--font-display); letter-spacing: -0.01em; }
+    #a4-badge { position: absolute; left: 1360px; top: 140px; padding: 10px 20px; border: 3px solid var(--unsicher); border-radius: 8px;
+      background: #fff6d6; font: 700 30px var(--font-body); color: var(--unsicher-ink); }
+    #a4-term { position: absolute; left: 192px; top: 250px; width: 1536px; height: 500px; background: #141a22; border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(27,36,48,0.18); overflow: hidden; }
+    #a4-bar { height: 56px; background: #232b36; display: flex; align-items: center; padding: 0 24px; font: 400 28px var(--font-body); color: #c3cad4; }
+    #a4-lines { position: absolute; left: 40px; top: 90px; font: 400 32px/52px var(--font-mono); color: #e6e9ee; white-space: pre; }
+    #a4-lines .dim { color: #9aa4b2; }
+    #a4-lines .ok { color: #5fd39b; }
+    #a4-lines .fr { color: #ff8a98; }
+    .a4-ch { opacity: 0; }
+    #a4-cursor { display: inline-block; width: 18px; height: 34px; background: #e6e9ee; vertical-align: -6px; margin-left: 4px; }
+    #a4-note { position: absolute; left: 192px; top: 860px; font: 700 40px var(--font-body); }
+    #a4-note span { color: var(--muted); font-weight: 400; }
+  </style>
+  <div data-hf-id="hf-t8xe" id="root" data-composition-id="a4" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-8mpr" id="a4-stage">
+      <div data-hf-id="hf-ec1i" id="a4-head">Der Mensch gibt frei</div>
+      <div data-hf-id="hf-vfkv" id="a4-badge">geplant · Schritt 4</div>
+      <div data-hf-id="hf-1d4l" id="a4-term">
+        <div data-hf-id="hf-9itg" id="a4-bar">PowerShell · E:\KI-Agent-Kanzlei-Demo</div>
+        <div data-hf-id="hf-wx2k" id="a4-lines"><div data-hf-id="hf-357u" id="a4-l1"><span data-hf-id="hf-3sli" class="dim">PS&gt; </span><span data-hf-id="hf-dld6" id="a4-cmd">python werkzeuge/freigabe.py</span></div><div data-hf-id="hf-zh0c" id="a4-l2" class="dim">Vorschlag 1 von 1</div><div data-hf-id="hf-fl8l" id="a4-l3">mail_19 · Gruppe: bescheid</div><div data-hf-id="hf-wgn8" id="a4-l4">Fristende (Vorschlag): <span data-hf-id="hf-48nq" class="fr">27.11.2026</span> · Status: offen</div><div data-hf-id="hf-hpnh" id="a4-l5">Freigeben? (ja/nein): <span data-hf-id="hf-yj14" id="a4-j" class="a4-ch">j</span><span data-hf-id="hf-a6dk" id="a4-a" class="a4-ch">a</span><span data-hf-id="hf-b7qs" id="a4-cursor"></span></div><div data-hf-id="hf-fuph" id="a4-l6" class="ok">✓ freigegeben von: Mensch · 03.11.2026 15:42</div><div data-hf-id="hf-kxio" id="a4-l7" class="dim">→ Eintrag in protokoll/aktionen.log</div></div>
+      </div>
+      <div data-hf-id="hf-0txv" id="a4-note">Nur im echten Terminal. <span data-hf-id="hf-q5rd">Der Agent kann nicht selbst „ja“ sagen.</span></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const cmd = document.getElementById("a4-cmd");
+      const text = cmd.textContent;
+      cmd.textContent = "";
+      for (let i = 0; i < text.length; i++) {
+        const s = document.createElement("span");
+        s.className = "a4-ch a4-cc"; s.textContent = text[i]; cmd.appendChild(s);
+      }
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#a4-stage", { x: 420, opacity: 0, filter: "blur(16px)" }, { x: 0, opacity: 1, filter: "blur(0px)", duration: 0.35, ease: "expo.out" }, 0);
+      tl.fromTo(["#a4-l2", "#a4-l3", "#a4-l4", "#a4-l5", "#a4-l6", "#a4-l7", "#a4-note", "#a4-badge"], { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
+      tl.fromTo("#a4-head", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, 0.3);
+      tl.to("#a4-badge", { opacity: 1, duration: 0.25 }, 0.8);
+      tl.fromTo(".a4-cc", { opacity: 0 }, { opacity: 1, duration: 0.01, stagger: 0.05 }, 1.0);
+      ["#a4-l2", "#a4-l3", "#a4-l4"].forEach((s, i) => tl.to(s, { opacity: 1, duration: 0.15 }, 2.9 + i * 0.35));
+      tl.to("#a4-l5", { opacity: 1, duration: 0.15 }, 4.5);
+      tl.fromTo("#a4-j", { opacity: 0 }, { opacity: 1, duration: 0.01 }, 5.6);
+      tl.fromTo("#a4-a", { opacity: 0 }, { opacity: 1, duration: 0.01 }, 5.9);
+      tl.to("#a4-cursor", { opacity: 0, duration: 0.01 }, 6.3);
+      tl.to("#a4-l6", { opacity: 1, duration: 0.2 }, 6.55);
+      tl.to("#a4-l7", { opacity: 1, duration: 0.2 }, 7.0);
+      tl.fromTo("#a4-note", { filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, 7.6);
+      tl.to("#a4-stage", { scale: 0.92, opacity: 0, filter: "blur(10px)", duration: 0.35, ease: "power3.in" }, 10.5);
+      window.__timelines["a4"] = tl;
+    })();
+  </script>
+</template>

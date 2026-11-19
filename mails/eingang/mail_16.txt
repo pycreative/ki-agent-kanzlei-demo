@@ -1,0 +1,23 @@
+Von: Svenja Morgenroth <s.morgenroth@webpost.example>
+An: posteingang@kanzlei-musterhain.example
+Datum: 03.11.2026 13:40
+Betreff: Rechnung Webseite
+Anhang: RE_2026-0457.pdf
+
+Hallo,
+
+anbei die Rechnung der Agentur für die neue Webseite.
+
+LG
+Svenja Morgenroth
+
+----- Anhang: RE_2026-0457.pdf (Textauszug) -----
+Webagentur Lindgrün GmbH · Gartenstraße 3 · 99999 Beispielstadt
+Rechnung Nr. 2026-0457
+Rechnungsdatum: 20.10.2026
+
+Überarbeitung Startseite, 5 Stunden à 50,00 EUR
+
+Nettobetrag:          250,00 EUR
+zzgl. 19 % USt:        47,50 EUR
+Rechnungsbetrag:      297,50 EUR

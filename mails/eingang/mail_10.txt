@@ -1,0 +1,41 @@
+Von: Florian Abendroth <f.abendroth@postfach.example>
+An: posteingang@kanzlei-musterhain.example
+Datum: 29.10.2026 19:44
+Betreff: WG: Neuer Bescheid in Mein ELSTER
+Anhang: Bescheid_ESt_2025_ELSTER.pdf
+
+Hallo,
+
+ich habe diese Nachricht von ELSTER bekommen und den Bescheid heruntergeladen.
+Er hängt an.
+
+Gruß
+Florian Abendroth
+
+---------- Weitergeleitete Nachricht ----------
+Von: Mein ELSTER <noreply@elster.example>
+Betreff: Neue Nachricht in Ihrem Postfach
+
+Ein neuer Steuerbescheid wurde am 26.10.2026 in Ihrem Postfach bei
+Mein ELSTER zum Abruf bereitgestellt.
+
+----- Anhang: Bescheid_ESt_2025_ELSTER.pdf (Textauszug) -----
+Finanzamt Beispielstadt · Am Amtsplatz 1 · 99999 Beispielstadt
+Datum: 26.10.2026
+Steuernummer: 000 000 00000
+
+Herrn Florian Abendroth, Birkenallee 15, 99999 Beispielstadt
+
+Bescheid für 2025 über Einkommensteuer
+Dieser Bescheid wurde Ihnen elektronisch zum Abruf bereitgestellt.
+
+Festgesetzt werden:  Einkommensteuer        6.210,00 EUR
+Bereits gezahlt:                            7.255,00 EUR
+Erstattung:                                 1.045,00 EUR
+
+Rechtsbehelfsbelehrung
+Der Bescheid kann mit dem Einspruch angefochten werden. Der Einspruch ist beim
+Finanzamt Beispielstadt schriftlich oder elektronisch einzureichen oder dort zur
+Niederschrift zu erklären. Die Frist für die Einlegung des Einspruchs beträgt
+einen Monat. Sie beginnt mit Ablauf des Tages, an dem Ihnen der Bescheid
+bekannt gegeben worden ist.

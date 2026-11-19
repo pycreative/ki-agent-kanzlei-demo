@@ -1,0 +1,22 @@
+mail_id;gruppe;entscheidung;kommentar;zeitpunkt;durch
+mail_03;bescheid;freigegeben;;07.11.2026 23:49;Mensch am Terminal
+mail_07;bescheid;freigegeben;;08.11.2026 07:57;Mensch am Terminal
+mail_10;bescheid;freigegeben;;08.11.2026 08:01;Mensch am Terminal
+mail_15;bescheid;freigegeben;;08.11.2026 08:15;Mensch am Terminal
+mail_19;bescheid;abgelehnt;muss geprüft werden;08.11.2026 08:17;Mensch am Terminal
+mail_19;bescheid;freigegeben;;08.11.2026 16:01;Mensch am Terminal
+mail_01;beleg;freigegeben;;08.11.2026 20:41;Mensch am Terminal
+mail_04;beleg;freigegeben;;08.11.2026 20:42;Mensch am Terminal
+mail_08;beleg;freigegeben;;08.11.2026 20:43;Mensch am Terminal
+mail_12;beleg;freigegeben;;08.11.2026 20:45;Mensch am Terminal
+mail_16;beleg;freigegeben;;08.11.2026 20:46;Mensch am Terminal
+mail_20;beleg;freigegeben;;08.11.2026 20:47;Mensch am Terminal
+mail_02;rueckfrage;freigegeben;;08.11.2026 20:55;Mensch am Terminal
+mail_06;rueckfrage;freigegeben;;08.11.2026 20:58;Mensch am Terminal
+mail_09;rueckfrage;freigegeben;;08.11.2026 21:01;Mensch am Terminal
+mail_14;rueckfrage;freigegeben;;08.11.2026 21:03;Mensch am Terminal
+mail_18;rueckfrage;freigegeben;;08.11.2026 21:04;Mensch am Terminal
+mail_05;unsicher;freigegeben;;08.11.2026 21:11;Mensch am Terminal
+mail_11;unsicher;freigegeben;;08.11.2026 21:12;Mensch am Terminal
+mail_13;unsicher;freigegeben;;08.11.2026 21:14;Mensch am Terminal
+mail_17;unsicher;freigegeben;;08.11.2026 21:15;Mensch am Terminal

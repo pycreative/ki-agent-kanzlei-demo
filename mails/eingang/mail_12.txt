@@ -1,0 +1,24 @@
+Von: Kai Lindenthal <kai@lindenthal-design.example>
+An: posteingang@kanzlei-musterhain.example
+Datum: 30.10.2026 11:18
+Betreff: Software-Abo Rechnung
+Anhang: invoice_CL-20931.pdf
+
+Hi,
+
+anbei die Rechnung für mein Software-Abo (ist auf Englisch).
+
+Gruß
+Kai
+
+----- Anhang: invoice_CL-20931.pdf (Textauszug) -----
+Cloudly Software Ltd. · 1 Harbour Road · Exampletown · Ireland
+
+INVOICE CL-20931
+Invoice date: 10/14/2026
+Bill to: Kai Lindenthal
+
+Description: Design Suite, monthly plan (October 2026)
+Subtotal:                    EUR 29.00
+VAT (reverse charge):        EUR 0.00
+Total due:                   EUR 29.00

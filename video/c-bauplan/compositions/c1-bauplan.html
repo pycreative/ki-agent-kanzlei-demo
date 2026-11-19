@@ -1,0 +1,127 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #c1-title { position: absolute; left: 192px; top: 104px; font: 800 60px var(--font-display); letter-spacing: -0.01em; }
+    #c1-sum { position: absolute; left: 860px; top: 122px; font: 700 40px var(--font-display); color: var(--ink); }
+    #c1-sum .d { color: var(--done); } #c1-sum .w { color: #b47a00; } #c1-sum .p { color: #5d6573; }
+    #c1-big { position: absolute; left: 192px; top: 400px; }
+    #c1-big .n { font: 800 80px var(--font-display); letter-spacing: -0.01em; }
+    #c1-big .s { font: 400 36px var(--font-body); color: var(--muted); margin-top: 10px; }
+    #c1-tree { position: absolute; left: 192px; top: 296px; font: 400 28px/46px var(--font-mono); white-space: pre; }
+    #c1-tree .t { color: var(--empty); }
+    #c1-tree .root { color: var(--ink); font-weight: 700; }
+    #c1-git { position: absolute; left: 192px; top: 822px; font: 400 28px var(--font-mono); color: var(--muted); }
+    .c1-cap { position: absolute; left: 192px; top: 880px; width: 620px; font: 400 32px/44px var(--font-body); color: var(--ink); }
+    .c1-cap b { font-weight: 600; }
+    .c1-fl { position: absolute; left: 860px; width: 868px; height: 72px; background: #ffffff; border: 3px solid var(--ink); border-radius: 6px; overflow: hidden; }
+    .c1-fl .tab { position: absolute; left: 0; top: 0; bottom: 0; width: 24px; }
+    .c1-fl .k { position: absolute; left: 48px; top: 14px; font: 700 32px var(--font-display); }
+    .c1-fl .st { position: absolute; right: 28px; top: 17px; font: 600 28px var(--font-body); }
+    .c1-fl.done .tab { background: var(--done); } .c1-fl.done .st { color: var(--done); }
+    .c1-fl.wip { border-color: var(--wip); } .c1-fl.wip .tab { background: var(--wip); } .c1-fl.wip .st { color: var(--wip-ink); }
+    .c1-fl.plan { border: 3px dashed var(--plan); background: rgba(255,255,255,0.55); } .c1-fl.plan .tab { background: transparent; }
+    .c1-fl.plan .k { color: #4f5764; } .c1-fl.plan .st { color: #5d6573; }
+    .c1-up { position: absolute; left: 860px; width: 868px; }
+    .c1-up .h { font: 700 36px var(--font-display); }
+    #c1-rules .r { font: 400 30px/50px var(--font-body); }
+    #c1-rules .r b { font: 400 28px var(--font-mono); color: var(--muted); margin-right: 14px; }
+    .c1-sq { position: absolute; width: 56px; height: 56px; border-radius: 6px; }
+    #c1-tests .l, #c1-v1 .l { position: absolute; left: 0; font: 400 32px var(--font-body); }
+    #c1-tests .l b { color: #b47a00; font-weight: 600; }
+    #c1-v1 .l b { font: 400 30px var(--font-mono); color: var(--muted); margin-right: 16px; }
+    #c1-end { position: absolute; left: 192px; top: 360px; }
+    #c1-end .ln { font: 800 66px/1.25 var(--font-display); letter-spacing: -0.01em; }
+    #c1-foot { position: absolute; left: 192px; top: 640px; width: 620px; font: 400 30px/1.35 var(--font-body); color: var(--muted); }
+  </style>
+  <div data-hf-id="hf-gi4f" id="root" data-composition-id="c1" data-width="1920" data-height="1080" data-layout-allow-overlap>
+    <div data-hf-id="hf-n8jj" id="c1-title">Der Bauplan wächst</div>
+    <div data-hf-id="hf-k4y1" id="c1-sum"><span data-hf-id="hf-egme" class="d">2 fertig</span> · <span data-hf-id="hf-i8tp" class="w">1 in Arbeit</span> · <span data-hf-id="hf-ifsj" class="p">5 geplant</span></div>
+    <div data-hf-id="hf-xscw" id="c1-big"><div data-hf-id="hf-ymo8" class="n">KI-Agent-Kanzlei-Demo/</div><div data-hf-id="hf-qqxp" class="s">Ein leerer Ordner · 02.11.2026</div></div>
+    <div data-hf-id="hf-aypt" id="c1-left">
+      <div data-hf-id="hf-hmdq" id="c1-tree"><div data-hf-id="hf-qfx5" class="root" id="c1-t0">KI-Agent-Kanzlei-Demo/</div><div data-hf-id="hf-005n" class="t" id="c1-t1">├─ CLAUDE.md</div><div data-hf-id="hf-gox4" class="t" id="c1-t2">├─ FORTSCHRITT.md</div><div data-hf-id="hf-f83l" class="t" id="c1-t3">├─ mails/eingang/   20 Mails</div><div data-hf-id="hf-vt29" class="t" id="c1-t4">├─ tests/erwartet.csv</div><div data-hf-id="hf-gyz6" class="t" id="c1-t5">├─ tests/testfaelle.md</div><div data-hf-id="hf-qmc4" class="t" id="c1-t6">├─ ausgabe/</div><div data-hf-id="hf-zrd4" class="t" id="c1-t7">├─ freigabe/</div><div data-hf-id="hf-rtsj" class="t" id="c1-t8">├─ werkzeuge/</div><div data-hf-id="hf-ymx3" class="t" id="c1-t9">├─ protokoll/</div><div data-hf-id="hf-pgzu" class="t" id="c1-t10">└─ .claude/agents · skills</div></div>
+      <div data-hf-id="hf-11ei" id="c1-git">Git: 1e0fd6d · 8ce2cc7</div>
+      <div data-hf-id="hf-zck1" class="c1-cap" id="c1-cap1"><b data-hf-id="hf-leef">Stufe 1:</b> Spezialisten mit eigenem Kontext</div>
+      <div data-hf-id="hf-sp9z" class="c1-cap" id="c1-cap2"><b data-hf-id="hf-siyo">Stufe 2:</b> Senden und Löschen technisch sperren</div>
+      <div data-hf-id="hf-cz4r" class="c1-cap" id="c1-cap3"><b data-hf-id="hf-8s7p">Stufe 3:</b> Anbindung an einen Mail-Ordner</div>
+      <div data-hf-id="hf-bie2" class="c1-cap" id="c1-cap4"><b data-hf-id="hf-oh6e">Stufe 4:</b> Derselbe Ablauf ohne Code</div>
+      <div data-hf-id="hf-m9v1" class="c1-cap" id="c1-cap5"><b data-hf-id="hf-qu2b">Stufe 5:</b> Trefferquote gegen das Orakel</div>
+    </div>
+
+    <div data-hf-id="hf-otxn" class="c1-up" id="c1-rules" style="top:280px"><div data-hf-id="hf-huum" class="h">CLAUDE.md · 9 harte Regeln</div><div data-hf-id="hf-l8nb" style="height:12px"></div><div data-hf-id="hf-0pb7" class="r"><b data-hf-id="hf-t4n0">1</b>Nur erfundene Daten</div><div data-hf-id="hf-g5um" class="r"><b data-hf-id="hf-rxpx">2</b>Nichts senden, nichts löschen</div><div data-hf-id="hf-cahd" class="r"><b data-hf-id="hf-sc0y">3</b>mails/ nur lesen</div><div data-hf-id="hf-lly1" class="r"><b data-hf-id="hf-ubk3">4</b>tests/ beim Sortieren nicht lesen</div><div data-hf-id="hf-os1u" class="r"><b data-hf-id="hf-upv4">5</b>freigabe/ schreibt nur der Mensch</div><div data-hf-id="hf-1i9s" class="r"><b data-hf-id="hf-tiy1">6</b>Fristen sind Vorschläge</div><div data-hf-id="hf-7h5g" class="r"><b data-hf-id="hf-tx92">7</b>Nicht raten · Vorrang für Bescheide</div><div data-hf-id="hf-x8ow" class="r"><b data-hf-id="hf-pjvr">8</b>Jede Aktion wird protokolliert</div><div data-hf-id="hf-ds1l" class="r"><b data-hf-id="hf-py6s">9</b>Keine Mail-Inhalte nach außen</div></div>
+    <div data-hf-id="hf-0xww" class="c1-up" id="c1-tests" style="top:300px;height:400px"><div data-hf-id="hf-37xe" class="h">Testdaten · 20 Fälle</div><div data-hf-id="hf-23ht" id="c1-sqs"></div><div data-hf-id="hf-r331" class="l" style="top:212px">6 Belege · 5 Rückfragen · 5 Bescheide · 4 unsicher</div><div data-hf-id="hf-s4gm" class="l" style="top:272px">Testorakel: Lösung vor dem Test festgelegt</div><div data-hf-id="hf-oiur" class="l" style="top:332px"><b data-hf-id="hf-kl5o">Testentwurf fand 2 Lücken</b> in der Spezifikation</div></div>
+    <div data-hf-id="hf-vtod" class="c1-up" id="c1-v1" style="top:300px;height:300px"><div data-hf-id="hf-qxz8" class="h">Version 1 · in Arbeit</div><div data-hf-id="hf-ewpd" class="l" style="top:74px"><b data-hf-id="hf-dmic">1</b>Skill posteingang sortiert in einer neuen Sitzung</div><div data-hf-id="hf-lxr3" class="l" style="top:144px"><b data-hf-id="hf-mt2h">2</b>Vorschläge landen in ausgabe/</div><div data-hf-id="hf-c6hr" class="l" style="top:214px"><b data-hf-id="hf-nwee">3</b>freigabe.py: der Mensch tippt „ja“</div></div>
+
+    <div data-hf-id="hf-iply" class="c1-fl done" id="c1-f0" style="top:858px"><div data-hf-id="hf-clpx" class="tab"></div><div data-hf-id="hf-qtq5" class="k">Fundament · CLAUDE.md, 9 Regeln</div><div data-hf-id="hf-mggt" class="st">fertig · 02.11.</div></div>
+    <div data-hf-id="hf-9v5q" class="c1-fl done" id="c1-f1" style="top:774px"><div data-hf-id="hf-zp61" class="tab"></div><div data-hf-id="hf-6pyc" class="k">Testdaten · 20 Mails, Orakel</div><div data-hf-id="hf-ggwi" class="st">fertig · 03.11.</div></div>
+    <div data-hf-id="hf-6pag" class="c1-fl wip" id="c1-f2" style="top:690px"><div data-hf-id="hf-0w34" class="tab"></div><div data-hf-id="hf-1jyy" class="k">Version 1 · Sortierung, Freigabe</div><div data-hf-id="hf-3udd" class="st">in Arbeit</div></div>
+    <div data-hf-id="hf-t1hl" class="c1-fl plan" id="c1-f3" style="top:606px"><div data-hf-id="hf-0hs3" class="tab"></div><div data-hf-id="hf-rdc4" class="k">Stufe 1 · Subagenten</div><div data-hf-id="hf-5a8m" class="st">geplant</div></div>
+    <div data-hf-id="hf-f4cj" class="c1-fl plan" id="c1-f4" style="top:522px"><div data-hf-id="hf-yi8y" class="tab"></div><div data-hf-id="hf-x76h" class="k">Stufe 2 · Hooks, Berechtigungen</div><div data-hf-id="hf-ru9m" class="st">geplant</div></div>
+    <div data-hf-id="hf-hrcm" class="c1-fl plan" id="c1-f5" style="top:438px"><div data-hf-id="hf-y3xx" class="tab"></div><div data-hf-id="hf-dh1u" class="k">Stufe 3 · MCP</div><div data-hf-id="hf-s8kn" class="st">geplant</div></div>
+    <div data-hf-id="hf-2tp8" class="c1-fl plan" id="c1-f6" style="top:354px"><div data-hf-id="hf-zav0" class="tab"></div><div data-hf-id="hf-t2f7" class="k">Stufe 4 · n8n</div><div data-hf-id="hf-smvo" class="st">geplant</div></div>
+    <div data-hf-id="hf-oyl2" class="c1-fl plan" id="c1-f7" style="top:270px"><div data-hf-id="hf-ywjz" class="tab"></div><div data-hf-id="hf-5zk7" class="k">Stufe 5 · Testen</div><div data-hf-id="hf-t16p" class="st">geplant</div></div>
+
+    <div data-hf-id="hf-ufuw" id="c1-end" data-hold><div data-hf-id="hf-rvsz" class="ln">Erst die Regeln.</div><div data-hf-id="hf-546g" class="ln">Dann die Tests.</div><div data-hf-id="hf-vg7v" class="ln">Dann der Agent.</div></div>
+    <div data-hf-id="hf-wzwt" id="c1-foot">Stand: Version 1 in Arbeit · Demo-Projekt mit erfundenen Daten</div>
+  </div>
+  <script>
+    (function () {
+      const groups = ["beleg","rueck","bescheid","beleg","unsicher","rueck","bescheid","beleg","rueck","bescheid","unsicher","beleg","unsicher","rueck","bescheid","beleg","unsicher","rueck","bescheid","beleg"];
+      const col = { beleg: "#2f6fdb", rueck: "#12906a", bescheid: "#d9541e", unsicher: "#e0a800" };
+      const sqs = document.getElementById("c1-sqs");
+      groups.forEach((g, i) => {
+        const q = document.createElement("div");
+        q.className = "c1-sq"; q.style.left = (i % 10) * 68 + "px"; q.style.top = 64 + Math.floor(i / 10) * 66 + "px"; q.style.background = col[g];
+        sqs.appendChild(q);
+      });
+      const tl = gsap.timeline({ paused: true });
+      const hidden = ["#c1-sum", "#c1-tree", "#c1-git", ".c1-cap", ".c1-up", ".c1-fl", "#c1-end .ln", "#c1-foot", "#c1-rules .r", ".c1-sq", "#c1-tests .l", "#c1-v1 .l", "#c1-tests .h", "#c1-v1 .h", "#c1-rules .h"];
+      tl.fromTo(hidden, { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
+      const ink = (sel, t, c) => tl.to(sel, { color: c || "#1f2329", duration: 0.3 }, t);
+      const dock = (sel, t) => tl.fromTo(sel, { y: -60 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, t);
+      const press = (sel, floorTop, t) => tl.to(sel, { scale: 0.12, y: floorTop + 36 - 500, opacity: 0, transformOrigin: "50% 50%", duration: 0.6, ease: "power3.in" }, t);
+
+      // Ein leerer Ordner wird zur Wurzel
+      tl.to("#c1-big", { x: 0, y: -104, scale: 0.42, transformOrigin: "0% 0%", opacity: 0, duration: 0.6, ease: "power2.inOut" }, 2.6);
+      tl.to("#c1-tree", { opacity: 1, duration: 0.01 }, 3.0);
+      tl.fromTo("#c1-tree > div", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.35, ease: "expo.out", stagger: 0.2 }, 3.0);
+
+      // Fundament: die 9 Regeln
+      tl.to(["#c1-rules", "#c1-rules .h"], { opacity: 1, duration: 0.2 }, 6.0);
+      tl.fromTo("#c1-rules .r", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.35, ease: "expo.out", stagger: 0.35 }, 6.3);
+      press("#c1-rules", 858, 12.6);
+      dock("#c1-f0", 12.9);
+      ink(["#c1-t1", "#c1-t2"], 13.4);
+
+      // Testdaten
+      tl.to(["#c1-tests", "#c1-tests .h"], { opacity: 1, duration: 0.2 }, 14.0);
+      tl.fromTo(".c1-sq", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.7)", stagger: 0.05 }, 14.3);
+      tl.to("#c1-tests .l", { opacity: 1, duration: 0.3, stagger: 1.4 }, 15.6);
+      press("#c1-tests", 774, 21.2);
+      dock("#c1-f1", 21.5);
+      ink(["#c1-t3", "#c1-t4", "#c1-t5"], 22.0);
+      tl.to("#c1-git", { opacity: 1, duration: 0.3 }, 22.6);
+
+      // Version 1
+      tl.to(["#c1-v1", "#c1-v1 .h"], { opacity: 1, duration: 0.2 }, 24.0);
+      tl.fromTo("#c1-v1 .l", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.4, ease: "expo.out", stagger: 1.2 }, 24.4);
+      press("#c1-v1", 690, 30.0);
+      dock("#c1-f2", 30.3);
+      ink(["#c1-t6", "#c1-t7", "#c1-t8"], 30.8, "#8a5e00");
+
+      // Stufen 1 bis 5 docken an
+      [3, 4, 5, 6, 7].forEach((f, i) => {
+        const t = 33.4 + i * 3.5;
+        dock("#c1-f" + f, t);
+        tl.fromTo("#c1-cap" + (i + 1), { filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, t + 0.2);
+        tl.to("#c1-cap" + (i + 1), { opacity: 0, filter: "blur(8px)", duration: 0.18 }, t + 3.3);
+      });
+      tl.fromTo("#c1-sum", { filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.25 }, 51.4);
+
+      // Schluss
+      tl.to("#c1-left", { opacity: 0, filter: "blur(10px)", duration: 0.35, ease: "power3.in" }, 54.0);
+      tl.fromTo("#c1-end .ln", { filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, stagger: 0.7 }, 54.6);
+      tl.to("#c1-foot", { opacity: 1, duration: 0.4 }, 57.0);
+      window.__timelines["c1"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,86 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #b2-title { position: absolute; left: 192px; top: 120px; font: 700 64px var(--font-display); color: var(--ink); }
+    #b2-tag { position: absolute; left: 192px; top: 214px; padding: 4px 14px; border: 3px solid var(--muted); border-radius: 6px;
+      font: 500 28px var(--font-body); color: var(--muted); }
+    .b2-box { position: absolute; width: 380px; height: 170px; background: var(--box); border: 4px solid var(--ink); border-radius: 6px; padding: 22px 26px; }
+    .b2-box .s { font: 400 30px var(--font-body); color: var(--muted); position: relative; display: inline-block; }
+    .b2-box .m { font: 600 52px var(--font-display); color: var(--ink); margin-top: 8px; }
+    #b2-svg { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: visible; }
+    #b2-strike { position: absolute; left: -6px; right: -6px; top: 50%; height: 4px; background: var(--signal); }
+    #b2-fcw { position: absolute; left: 1378px; top: 496px; font: 500 30px var(--font-body); color: var(--signal); }
+    #b2-human { position: absolute; left: 1348px; top: 262px; width: 380px; height: 130px; background: var(--box); border: 4px solid var(--ink);
+      border-radius: 6px; padding: 16px 26px; }
+    #b2-human .m { font: 600 48px var(--font-display); }
+    #b2-human .s { font: 400 28px var(--font-body); color: var(--muted); }
+    #b2-loop { position: absolute; left: 760px; top: 790px; font: 400 30px var(--font-body); color: var(--muted); }
+    .b2-cap { position: absolute; left: 192px; top: 872px; width: 1536px; font: 500 42px var(--font-body); color: var(--ink); }
+  </style>
+  <div data-hf-id="hf-i243" id="root" data-composition-id="b2" data-width="1920" data-height="1080" data-layout-allow-overlap>
+    <div data-hf-id="hf-sqew" id="b2-stage">
+      <div data-hf-id="hf-ppkh" id="b2-title">Der Agent als Regelkreis</div>
+      <div data-hf-id="hf-qm0g" id="b2-tag">Lehrmodell</div>
+      <svg data-hf-id="hf-57vd" id="b2-svg" viewBox="0 0 1920 1080">
+        <g data-hf-id="hf-u3qc" fill="none" stroke="#173f7a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <path data-hf-id="hf-z0rr" id="b2-a1" d="M 572 555 L 762 555" /><path data-hf-id="hf-s0u0" id="b2-a1h" d="M 744 541 L 764 555 L 744 569" />
+          <path data-hf-id="hf-mo2c" id="b2-a2" d="M 1150 555 L 1340 555" /><path data-hf-id="hf-drl2" id="b2-a2h" d="M 1322 541 L 1342 555 L 1322 569" />
+          <path data-hf-id="hf-9caf" id="b2-fb" d="M 1538 640 L 1538 770 L 382 770 L 382 648" stroke-dasharray="14 10" /><path data-hf-id="hf-5eu4" id="b2-fbh" d="M 368 666 L 382 646 L 396 666" />
+          <path data-hf-id="hf-giwf" id="b2-ha" d="M 1538 392 L 1538 462" /><path data-hf-id="hf-dx87" id="b2-hah" d="M 1524 444 L 1538 464 L 1552 444" />
+        </g>
+      </svg>
+      <div data-hf-id="hf-5m1x" class="b2-box" id="b2-sensor" style="left:192px;top:470px"><div data-hf-id="hf-yulb" class="s">Radar · Kamera</div><div data-hf-id="hf-bk92" class="m">Posteingang</div></div>
+      <div data-hf-id="hf-kns4" class="b2-box" id="b2-ecu" style="left:770px;top:470px"><div data-hf-id="hf-rho9" class="s">Steuergerät</div><div data-hf-id="hf-c732" class="m">Agent</div></div>
+      <div data-hf-id="hf-f2yx" class="b2-box" id="b2-act" style="left:1348px;top:470px"><div data-hf-id="hf-4u59" class="s" id="b2-brake">Bremse<span data-hf-id="hf-nwk1" id="b2-strike"></span></div><div data-hf-id="hf-12c0" class="m">Entwürfe</div></div>
+      <div data-hf-id="hf-z2da" id="b2-fcw">Warnung statt Bremse</div>
+      <div data-hf-id="hf-w2yd" id="b2-human"><div data-hf-id="hf-hgbn" class="m">Mensch</div><div data-hf-id="hf-ss1y" class="s">überwacht und gibt frei</div></div>
+      <div data-hf-id="hf-8jc2" id="b2-loop">neue Lage · neue Mails</div>
+      <div data-hf-id="hf-7he8" class="b2-cap" id="b2-cap1">Erfassen → bewerten → handeln.</div>
+      <div data-hf-id="hf-g0rm" class="b2-cap" id="b2-cap2">Der Agent bremst nicht selbst. Er warnt und schlägt vor.</div>
+      <div data-hf-id="hf-gaye" class="b2-cap" id="b2-cap3" data-hold>Wie SAE Level 2: Das System arbeitet, der Mensch überwacht.</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const lines = ["#b2-a1", "#b2-a2", "#b2-fb", "#b2-ha"];
+      lines.forEach((s) => {
+        const p = document.querySelector(s), L = p.getTotalLength();
+        tl.fromTo(p, { strokeDasharray: s === "#b2-fb" ? "14 10" : L, strokeDashoffset: s === "#b2-fb" ? 0 : L, opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
+      });
+      tl.fromTo(["#b2-a1h", "#b2-a2h", "#b2-fbh", "#b2-hah", "#b2-fcw", "#b2-human", "#b2-loop", ".b2-cap", "#b2-strike"], { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
+      tl.fromTo("#b2-title", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, 0.1);
+      tl.fromTo("#b2-tag", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 0.5);
+      [["#b2-sensor", 0.3], ["#b2-ecu", 1.5], ["#b2-act", 2.7]].forEach(([s, t]) => {
+        tl.fromTo(s, { opacity: 0, scale: 0.92 }, { opacity: 1, scale: 1, duration: 0.5, ease: "expo.out" }, t);
+      });
+      [["#b2-a1", "#b2-a1h", 1.0], ["#b2-a2", "#b2-a2h", 2.2]].forEach(([p, h, t]) => {
+        tl.to(p, { opacity: 1, duration: 0.01 }, t);
+        tl.to(p, { strokeDashoffset: 0, duration: 0.45, ease: "power2.inOut" }, t);
+        tl.to(h, { opacity: 1, duration: 0.1 }, t + 0.4);
+      });
+      tl.to(["#b2-fb", "#b2-fbh"], { opacity: 1, duration: 0.5 }, 3.6);
+      tl.to("#b2-loop", { opacity: 1, duration: 0.3 }, 4.0);
+      tl.to("#b2-cap1", { opacity: 1, duration: 0.2 }, 4.6);
+      // Bremse wird zur Warnung (FCW statt AEB)
+      tl.to("#b2-cap1", { opacity: 0, filter: "blur(8px)", duration: 0.18 }, 7.3);
+      tl.fromTo("#b2-strike", { scaleX: 0, transformOrigin: "0% 50%" }, { opacity: 1, scaleX: 1, duration: 0.3, ease: "expo.out" }, 7.5);
+      tl.to("#b2-brake", { opacity: 0, duration: 0.2 }, 8.1);
+      tl.fromTo("#b2-fcw", { x: -16 }, { opacity: 1, x: 0, duration: 0.4, ease: "expo.out" }, 8.25);
+      tl.fromTo("#b2-cap2", { filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, 7.5);
+      // Mensch darüber
+      tl.to("#b2-cap2", { opacity: 0, filter: "blur(8px)", duration: 0.18 }, 11.2);
+      tl.fromTo("#b2-human", { y: -30 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, 10.0);
+      tl.to("#b2-ha", { opacity: 1, duration: 0.01 }, 10.4);
+      tl.to("#b2-ha", { strokeDashoffset: 0, duration: 0.3, ease: "power2.out" }, 10.4);
+      tl.to("#b2-hah", { opacity: 1, duration: 0.1 }, 10.65);
+      tl.fromTo("#b2-cap3", { filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, 11.3);
+      tl.to("#b2-fb", { strokeDashoffset: -240, duration: 4.0, ease: "none" }, 11.3);
+      // Zoom durch das Steuergerät
+      tl.to(["#b2-sensor", "#b2-act", "#b2-human", "#b2-svg", ".b2-cap", "#b2-loop", "#b2-fcw", "#b2-title", "#b2-tag"], { opacity: 0, duration: 0.3, ease: "power2.in" }, 15.3);
+      tl.to("#b2-ecu", { scaleX: 988 / 380, scaleY: 442 / 170, transformOrigin: "50% 50%", y: 0, duration: 0.6, ease: "power3.in" }, 15.35);
+      tl.to("#b2-ecu .s, #b2-ecu .m", { opacity: 0, duration: 0.2 }, 15.35);
+      window.__timelines["b2"] = tl;
+    })();
+  </script>
+</template>

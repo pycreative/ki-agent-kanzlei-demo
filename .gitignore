@@ -1,0 +1,12 @@
+# Python-Zwischendateien
+__pycache__/
+*.pyc
+
+# Persönliche Claude-Einstellungen für dieses Projekt (nicht teilen)
+.claude/settings.local.json
+
+# Videos: Zwischenbilder, Prüfberichte und fertige MP4 nicht ins Repository
+video/*/.hyperframes/
+video/check-*.json
+video/renders/
+node_modules/
